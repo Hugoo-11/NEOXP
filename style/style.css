@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+body {
+    background: #02050a;
+    color: #d4e8ff;
+}
+
+header {
+    width: 100%;
+    background: rgba(0, 10, 20, 0.85);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #0ae0ff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+header .logo {
+    color: #00d9ff;
+    text-shadow: 0 0 12px #00d9ff;
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #b5dbff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background: rgba(0, 136, 255, 0.3);
+    color: #00d9ff;
+    box-shadow: 0 0 10px #00c4ff;
+}
+
+.menu-btn {
+    color: #00d9ff;
+    font-size: 1.8rem;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 900px) {
+    nav {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 250px;
+        background: rgba(0, 15, 30, 0.95);
+        border-left: 1px solid #0ae0ff;
+        transform: translateX(100%);
+        transition: 0.4s;
+    }
+    nav.active {
+        transform: translateX(0);
+    }
+    nav ul {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .menu-btn {
+        display: block;
+    }
+}
+
+section {
+    padding: 120px 7%;
+}
+
+h1, h2, h3 {
+    color: #00d9ff;
+    text-shadow: 0 0 10px #00d9ff;
+}
+
+button, .btn {
+    background: linear-gradient(90deg, #0038ff, #00eaff);
+    border: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.25s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+button:hover, .btn:hover {
+    box-shadow: 0 0 18px #00eaff;
+    transform: scale(1.05);
+}
+
+.product-card, .card, .producto {
+    background: rgba(0, 12, 25, 0.75);
+    border: 1px solid #007bff;
+    border-radius: 14px;
+    padding: 18px;
+    transition: 0.3s;
+}
+
+.product-card:hover, .card:hover, .producto:hover {
+    box-shadow: 0 0 18px #00caff;
+    transform: translateY(-5px);
+}
+
+footer {
+    background: #000814;
+    padding: 40px 20px;
+    text-align: center;
+    color: #7ecbff;
+    border-top: 1px solid #007bff;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    background: rgba(0, 8, 20, 0.8);
+    border: 1px solid #008cff;
+    border-radius: 8px;
+    color: #d4e8ff;
+    outline: none;
+    transition: 0.2s;
+}
+
+input:focus, textarea:focus, select:focus {
+    box-shadow: 0 0 12px #00c8ff;
+}
+
+img {
+    filter: drop-shadow(0 0 8px rgba(0, 204, 255, 0.4));
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(0, 12, 30, 0.6);
+    border: 1px solid #007bff;
+    color: #d2eaff;
+}
+
+table th {
+    background: rgba(0, 136, 255, 0.5);
+    padding: 12px;
+    color: white;
+}
+
+table td {
+    padding: 10px;
+    border-bottom: 1px solid #00408f;
+}
+
+a {
+    color: #00baff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-shadow: 0 0 10px #00eaff;
+}
+
+.hero {
+    background: linear-gradient(140deg, #000814, #001a33, #002b55);
+    padding: 180px 7%;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    text-shadow: 0 0 20px #00c9ff;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: #c7e8ff;
+}
+
+.catalog-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 35px;
+    justify-items: center;
+}
+
+.product-card {
+    background: rgba(0, 12, 25, 0.75);
+    border: 1px solid #007bff;
+    border-radius: 16px;
+    padding: 18px;
+    width: 100%;
+    max-width: 350px;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 22px #00caff;
+}
+
+.product-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 8px rgba(0, 204, 255, 0.4));
+}
+
+.prod-name {
+    margin-top: 15px;
+    font-size: 1.3rem;
+    color: #00d9ff;
+    text-shadow: 0 0 10px #00d9ff;
+    text-align: center;
+}
+
+.prod-price {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    color: #b8dfff;
+    text-align: center;
+}
+
+.product-card button {
+    width: 100%;
+    background: linear-gradient(90deg, #0038ff, #00eaff);
+    color: white;
+    padding: 12px;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.product-card button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 18px #00eaff;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 40px;
+    color: #00eaff;
+    text-shadow: 0 0 12px #00eaff;
+}
+
+.contact-container {
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+.contact-container label {
+    color: #00eaff;
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.contact-container input,
+.contact-container textarea {
+    width: 100%;
+    padding: 14px;
+    border-radius: 6px;
+    border: 1px solid #00eaff;
+    background: #111;
+    color: #d4f8ff;
+    margin-bottom: 25px;
+}
+
+.btn-contact {
+    width: 100%;
+    background: linear-gradient(90deg, #8f00ff, #d000ff);
+    border: none;
+    color: white;
+    padding: 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-contact:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 15px #d000ff;
+}
+
+.map-section {
+    margin-top: 80px;
+}
+
+.map-section h2 {
+    text-align: center;
+    color: #c8e6ff;
+    font-size: 2.2rem;
+    text-shadow: 0 0 8px #00eaff;
+}
+
+.map-container {
+    margin: 40px auto;
+    width: 100%;
+    max-width: 1100px;
+    height: 450px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #00eaff;
+    box-shadow: 0 0 14px rgba(0, 238, 255, 0.4);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+
